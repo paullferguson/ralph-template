@@ -1,0 +1,38 @@
+{
+  "name": "ralph-tutorial",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cherry-pick": "ai-hero-cli cherry-pick --branch=live-run-through",
+    "reset": "ai-hero-cli reset --branch=live-run-through",
+    "pull": "ai-hero-cli pull",
+    "dev": "echo 'Not implemented yet'",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "ralph:hitl": "chmod +x plans/once.sh && plans/once.sh",
+    "ralph:afk": "chmod +x plans/afk.sh && plans/afk.sh",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": false,
+    "printWidth": 80,
+    "tabWidth": 2
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "ai-hero-cli": "^0.2.15",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}
