@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 for ((i=1; i<=$1; i++)); do
-  result=$(docker sandbox run --credentials host claude -p "$issues @progress.txt @plans/prompt.md")
+  result=$(docker sandbox run --credentials host claude -p "@progress.txt @plans/prompt.md")
 
   echo "$result"
 
