@@ -1,6 +1,10 @@
+# PRD
+
+Pull @plans/prd.md into your context.
+
 # TASK BREAKDOWN
 
-Break down the issues into tasks. An issue may contain a single task (a small bugfix or visual tweak) or many, many tasks (a PRD or a large refactor).
+Break down the PRD into tasks.
 
 Make each task the smallest possible unit of work. We don't want to outrun our headlights. Aim for one small change per task.
 
