@@ -1,6 +1,7 @@
 # PRD
 
 Pull @plans/prd.md into your context.
+Pull @progress.txt into your context.
 
 # TASK BREAKDOWN
 

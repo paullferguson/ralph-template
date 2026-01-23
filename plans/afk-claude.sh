@@ -21,7 +21,7 @@ for ((i=1; i<=$1; i++)); do
     --verbose \
     --print \
     --output-format stream-json \
-    "@progress.txt @plans/prompt.md" \
+    @plans/prompt.md \
   | grep --line-buffered '^{' \
   | tee "$tmpfile" \
   | jq --unbuffered -rj "$stream_text"
