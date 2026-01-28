@@ -24,10 +24,6 @@ Explore the repo and fill your context window with relevant information that wil
 
 Complete the task.
 
-If you find that the task is larger than you expected (for instance, requires a refactor first), output "HANG ON A SECOND".
-
-Then, find a way to break it into a smaller chunk and only do that chunk (i.e. complete the smaller refactor).
-
 # FEEDBACK LOOPS
 
 Before committing, run the feedback loops:
