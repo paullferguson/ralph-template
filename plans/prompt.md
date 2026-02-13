@@ -1,6 +1,6 @@
 # ISSUES
 
-Local issues from `issues/` directory are provided at start of context. Each issue is a markdown file with its filename and contents.
+Open GitHub issues for this repo are provided at the start of context (fetched via `gh issue list` / `gh issue view`). Each issue is shown as `--- #<number> <title> ---` followed by its body.
 
 You've also been passed the last 10 RALPH commits (SHA, date, full message). Review these to understand what work has been done.
 
@@ -83,9 +83,9 @@ Keep it concise.
 
 # THE ISSUE
 
-If the task is complete, delete the issue file from the `issues/` directory.
+If the task is complete, close the corresponding GitHub issue: `gh issue close <number>`.
 
-If the task is not complete, append a brief summary of what was done to the issue file.
+If the task is not complete, add a progress comment: `gh issue comment <number> --body "Summary of what was done and what remains."`
 
 # FINAL RULES
 

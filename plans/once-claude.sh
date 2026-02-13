@@ -3,10 +3,14 @@
 set -e
 
 issues=""
-if [ -d "issues" ]; then
-  for f in issues/*.md; do
-    [ -f "$f" ] && issues+="--- $(basename "$f") ---
-$(cat "$f")
+if command -v gh &>/dev/null; then
+  for num in $(gh issue list --state open --json number -q '.[].number' 2>/dev/null); do
+    data=$(gh issue view "$num" --json number,title,body 2>/dev/null)
+    [ -z "$data" ] && continue
+    title=$(echo "$data" | jq -r .title)
+    body=$(echo "$data" | jq -r .body // "")
+    issues+="--- #$num $title ---
+$body
 
 "
   done
