@@ -36,7 +36,7 @@ Explore the repo and fill your context window with relevant information that wil
 
 # EXECUTION: RED
 
-First, write tests that fail because the feature is not yet implemented.
+Where suitable, first write tests that fail because the feature is not yet implemented.
 
 Run the tests to check that they fail using `npm run test`.
 

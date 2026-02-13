@@ -1,5 +1,6 @@
 {
   /* From https://www.totaltypescript.com/tsconfig-cheat-sheet */
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "compilerOptions": {
     /* Base Options: */
     "esModuleInterop": true,
