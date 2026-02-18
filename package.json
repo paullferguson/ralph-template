@@ -4,9 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "cherry-pick": "ai-hero-cli cherry-pick --branch=live-run-through",
-    "reset": "ai-hero-cli reset --branch=live-run-through",
-    "pull": "ai-hero-cli pull",
     "dev": "echo 'Not implemented yet'",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
@@ -26,9 +23,11 @@
     "printWidth": 80,
     "tabWidth": 2
   },
+  "dependencies": {
+    "tsx": "^4.21.0"
+  },
   "devDependencies": {
     "@types/node": "^25.0.3",
-    "ai-hero-cli": "^0.2.15",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",

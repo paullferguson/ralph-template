@@ -16,19 +16,35 @@ Pick the next task. Prioritize tasks in this order:
 
 1. Critical bugfixes
 2. Development infrastructure
+3. Integration points between modules
+4. Architectural decisions and core abstractions
+5. Unknown unknowns and spike work
 
 Getting development infrastructure like tests and types and dev scripts ready is an important precursor to building features.
 
-3. Tracer bullets for new features
+6. Tracer bullets for new features
 
 Tracer bullets comes from the Pragmatic Programmer. When building systems, you want to write code that gets you feedback as quickly as possible. Tracer bullets are small slices of functionality that go through all layers of the system, allowing you to test and validate your approach early. This helps in identifying potential issues and ensures that the overall architecture is sound before investing significant time in development.
 
 TL;DR - build a tiny, end-to-end slice of the feature first, then expand it out.
 
-4. Polish and quick wins
-5. Refactors
+7. Standard features and implementation
+8. Polish and quick wins
+9. Refactors
+
+Fail fast on risky work. Save easy wins for later.
 
 If there are no more tasks, emit <promise>NO MORE TASKS</promise>.
+
+# SIZE
+
+Keep changes small and focused:
+
+- One logical change per commit
+- If a task feels too large, break it into subtasks
+- Prefer multiple small commits over one large commit
+- Run feedback loops after each change, not at the end
+  Quality over speed. Small steps compound into big progress.
 
 # EXPLORATION
 
@@ -65,9 +81,22 @@ If anything blocks your completion of the task, output <promise>ABORT</promise>.
 
 # FEEDBACK LOOPS
 
-Before committing, run the feedback loops:
+Before committing, run ALL feedback loops:
 
-- `npm run typecheck` to run the type checker
+1. TypeScript: `npm run typecheck` (must pass with no errors)
+2. Tests: `npm run test` (must pass)
+3. Lint: `npm run lint` (must pass)
+   Do NOT commit if any feedback loop fails. Fix issues first.
+
+# PROGRESS
+
+After completing each task, append to progress.txt:
+
+- Task completed and PRD item reference
+- Key decisions made and reasoning
+- Files changed
+- Any blockers or notes for next iteration
+  Keep entries concise. Sacrifice grammar for the sake of concision. This file helps future iterations skip exploration.
 
 # COMMIT
 
